@@ -1,0 +1,67 @@
+
+/* navbar start */
+form a{
+  text-decoration: none;
+  background-color: #4834d4;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: #fff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  transition: 1s;
+  font-weight: bold;
+  text-align: center;
+}
+.navbar{
+  background-color: #4834d4;
+}
+.collapse .navbar-nav .nav-item .nav-link{
+  color: #fff;
+  padding-left: 20px;
+  transition: 1s;
+}
+
+.collapse .navbar-nav .nav-item .nav-link:hover{
+  text-decoration: underline;
+}
+
+.navbar-toggler{
+  border: 0;
+  outline: 0;
+}
+.navbar-toggler span{
+  color: #fff;
+}
+.navbar .navbar-toggler{
+  border: 0;
+}
+.navbar .navbar-toggler:focus{
+  box-shadow: none;
+  border: 0;
+  outline: 0;
+}
+/* navbar end */
+
+
+
+/* login-singup-user start */
+.login-singup-user{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.login-singup-user .input-group .form-control:focus{
+  box-shadow: none;
+}
+
+
+/* login-singup-user end */
