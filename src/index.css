@@ -11,7 +11,7 @@ form a{
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   transition: 1s;
@@ -78,6 +78,15 @@ form a{
   box-shadow: none;
 }
 
+.post_add section{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+.post_add img{
+  padding: 5px;
+}
 /* <!-- public post end --> */
 
 

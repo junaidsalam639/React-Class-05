@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from './Component/Navbar'
 import { db, collection, addDoc, onAuthStateChanged, auth, ref, uploadBytes, storage, query, where, getDocs , getDownloadURL } from './Config/Firebase';
-
+import './index.css'
 
 const Dashboard = () => {
 
@@ -50,6 +50,7 @@ const Dashboard = () => {
   // Dashboard Get data code start
   onAuthStateChanged(auth, async (user) => {
     if (user) {
+      let post_add = document.getElementById('post_add');
       const uid = user.uid;
       const q = query(collection(db, "Detail-Dashboard"), where("email", "==", user.email));
 
@@ -59,11 +60,21 @@ const Dashboard = () => {
         getDownloadURL(ref(storage, doc.id))
   .then((url) => {
         console.log(url);
+        post_add.innerHTML += `
+        <div className="col-lg-8">
+        <section>
+        <img src="${url}" alt="" width=${120} style=${{borderRadius : '15px'}}  className='p-3'/>
+        <div className="para">
+        <h4 className='fw-bold' id='title1'>${doc.data().title}</h4>
+        <p className='text-center' style=${{letterSpacing: '5px'}}>${doc.data().name1}</p>
+        </section>
+        </div>
+        <p className='p-3' style=${{letterSpacing: '1px'}}>${doc.data().description}!</p>
+    </div>`
   })
   .catch((error) => {
     console.log(error);
   });
-
       });
     } else {
 
@@ -128,17 +139,8 @@ const Dashboard = () => {
 
       {/* <!-- public post start --> */}
         <div className="container">
-          <div className="row" id='post_add'>
-          <div className="col-lg-8">
-    <div className="image d-flex justify-content-start align-items-center">
-     <img src="https://media.istockphoto.com/id/1322277517/photo/wild-grass-in-the-mountains-at-sunset.jpg?s=612x612&w=0&k=20&c=6mItwwFFGqKNKEAzv0mv6TaxhLN3zSE43bWmFN--J5w=" alt="" width={160} style={{borderRadius : '15px'}}  className='p-3'/>
-     <div className="para">
-     <h4 className='fw-bold' id='title1'>Title</h4>
-     <p className='' style={{letterSpacing: '5px'}}>Name</p>
-     </div>
-    </div>
-    <p className='p-3' style={{letterSpacing: '1px'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione neque tempore saepe esse commodi provident quod ab. Dignissimos dolorum iste non iure a, magnam illum minus officiis laudantium accusamus nesciunt!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione neque tempore saepe esse commodi provident quod ab. Dignissimos dolorum iste non iure a, magnam illum minus officiis laudantium accusamus nesciunt!</p>
-</div>
+          <div className="row post_add" id='post_add'>
+         
           </div>
         </div>
       {/* <!-- public post end --> */}
