@@ -47,7 +47,7 @@ const Dashboard = () => {
       }
     })
   }
-
+  
   // Dashboard Get data code start
   onAuthStateChanged(auth, async (user) => {
     if (user) {
@@ -64,7 +64,7 @@ const Dashboard = () => {
         post_add.innerHTML += `
         <div className="col-lg-8">
         <section>
-        <img src="${url}" alt="" width=${120} style=${{borderRadius : '15px'}}  className='p-3'/>
+        <img src="${url}" alt="" width=${120} height=${120} style=${{borderRadius : '15px'}}  className='p-3'/>
         <div className="para">
         <h4 className='fw-bold' id='title1'>${doc.data().title}</h4>
         <h6 className='text-center' style=${{letterSpacing: '5px'}}>${doc.data().name1}</h6>
@@ -72,6 +72,7 @@ const Dashboard = () => {
         </div>
         <p className='mt-4' style=${{letterSpacing: '1px'}}>${doc.data().description}!</p>
     </div>`
+    console.log(doc.id);
   })
   .catch((error) => {
     console.log(error);
@@ -81,8 +82,7 @@ const Dashboard = () => {
 
     }
   });
-
-
+    
   return (
     <div>
       <div className="sticky-top">

@@ -91,7 +91,11 @@ form a{
   padding-top: 15px;
 }
 .post_add :first-child{
-  margin-top: 3%;
+  margin-top: 4%;
+}
+.post_add button{
+ margin-top: 10px;
+ margin-bottom: 10px;
 }
 /* <!-- public post end --> */
 
