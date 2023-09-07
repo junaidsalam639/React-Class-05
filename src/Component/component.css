@@ -1,0 +1,27 @@
+.input {
+    text-align: center;
+}
+.input label{
+    width: 120px;
+}
+.input input {
+    margin: 10px;
+    width: 240px;
+    padding: 4px;
+    text-transform: capitalize;
+    border: 0;
+    outline: 0;
+    border:  1px solid #00a8ff;
+}
+.show{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.result{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}

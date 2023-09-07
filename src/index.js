@@ -14,7 +14,7 @@ import {
 import Login from './Singup-Login/Login'
 import Singup from './Singup-Login/Singup';
 import Dashboard from './Dashboard';
-
+import UserData from './Component/UserData';
 
 const router = createBrowserRouter([
   {
@@ -32,6 +32,10 @@ const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <Dashboard />,
+  },
+  {
+    path: "/userdata",
+    element: <UserData />,
   },
 ]);
 
