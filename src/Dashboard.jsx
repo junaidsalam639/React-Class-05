@@ -58,21 +58,10 @@ const Dashboard = () => {
         console.log(doc.id, " => ", doc.data());
         getDownloadURL(ref(storage, doc.id))
   .then((url) => {
-    document.getElementById('post_add').innerHTML += `
-    <div className="col-lg-8">
-    <div className="image d-flex justify-content-start align-items-center">
-     <img src="${url}" alt="" width={160} style={{borderRadius : '15px'}}  className='p-3'/>
-     <div className="para">
-     <h4 className='fw-bold' id='title1'>${doc.data().title}</h4>
-     <p className='' style={{letterSpacing: '5px'}}>${doc.data().name1}</p>
-     </div>
-    </div>
-    <p className='p-3' style={{letterSpacing: '1px'}}>${doc.data().description}</p>
-</div>
-    `
+        console.log(url);
   })
   .catch((error) => {
-    // Handle any errors
+    console.log(error);
   });
 
       });
@@ -140,7 +129,16 @@ const Dashboard = () => {
       {/* <!-- public post start --> */}
         <div className="container">
           <div className="row" id='post_add'>
-        
+          <div className="col-lg-8">
+    <div className="image d-flex justify-content-start align-items-center">
+     <img src="https://firebasestorage.googleapis.com/v0/b/react-85e4f.appspot.com/o/ANOsBUZhU5roPFiPqy4l?alt=media&token=5d9e8322-7673-4031-b52f-e67ce40a1fc2" alt="" width={160} style={{borderRadius : '15px'}}  className='p-3'/>
+     <div className="para">
+     <h4 className='fw-bold' id='title1'>Title</h4>
+     <p className='' style={{letterSpacing: '5px'}}>Name</p>
+     </div>
+    </div>
+    <p className='p-3' style={{letterSpacing: '1px'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione neque tempore saepe esse commodi provident quod ab. Dignissimos dolorum iste non iure a, magnam illum minus officiis laudantium accusamus nesciunt!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione neque tempore saepe esse commodi provident quod ab. Dignissimos dolorum iste non iure a, magnam illum minus officiis laudantium accusamus nesciunt!</p>
+</div>
           </div>
         </div>
       {/* <!-- public post end --> */}
