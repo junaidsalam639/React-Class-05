@@ -61,7 +61,7 @@ const Dashboard = () => {
   .then((url) => {
         console.log(url);
         post_add.innerHTML += `
-        <div className="col-lg-8">
+        <div className="col-lg-8 mt-5">
         <section>
         <img src="${url}" alt="" width=${120} style=${{borderRadius : '15px'}}  className='p-3'/>
         <div className="para">

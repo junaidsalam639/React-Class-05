@@ -90,6 +90,9 @@ form a{
 .post_add p{
   padding-top: 15px;
 }
+.post_add :first-child{
+  margin-top: 3%;
+}
 /* <!-- public post end --> */
 
 
