@@ -32,6 +32,7 @@ const Dashboard = () => {
             uploadBytes(storageRef, image).then((snapshot) => {
               console.log('Uploaded a blob or file!');
               alert('Dashboard Post Successfull');
+              window.location.reload()
             });
           } catch (e) {
             console.error("Error adding document: ", e);
@@ -61,7 +62,7 @@ const Dashboard = () => {
   .then((url) => {
         console.log(url);
         post_add.innerHTML += `
-        <div className="col-lg-8 mt-5">
+        <div className="col-lg-8">
         <section>
         <img src="${url}" alt="" width=${120} style=${{borderRadius : '15px'}}  className='p-3'/>
         <div className="para">
@@ -139,7 +140,7 @@ const Dashboard = () => {
 
       {/* <!-- public post start --> */}
         <div className="container">
-          <div className="row post_add" id='post_add'>
+          <div className="row post_add col-lg-8" id='post_add'>
          
           </div>
         </div>
