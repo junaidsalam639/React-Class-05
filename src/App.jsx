@@ -2,20 +2,21 @@ import React from "react";
 import Navbar from "./Component/Navbar";
 import { db, collection, addDoc, onAuthStateChanged, auth, ref, uploadBytes, storage, query, where, getDocs, getDownloadURL } from './Config/Firebase';
 
-async function App() {
+function App() {
 
-  const q = query(collection(db, "Detail-Dashboard"));
-
+  async function post () {
+    const q = query(collection(db, "Detail-Dashboard"));
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((doc) => {
     console.log(doc.id, " => ", doc.data());
     getDownloadURL(ref(storage, doc.id))
       .then((url) => {
         console.log(url);
+        let post_add = document.getElementById('post_add');
         post_add.innerHTML += `
         <div className="col-lg-8">
         <section>
-        <img src="${url}" alt="" width=${120} height=${120} style=${{ borderRadius: '15px' }}  className='p-3'/>
+        <img src="${url}" alt="" style=${{ borderRadius: '15px' }}  className='p-3'/>
         <div className="para">
         <h4 className='fw-bold' id='title1'>${doc.data().title}</h4>
         <h6 className='text-center' style=${{ letterSpacing: '5px' }}>${doc.data().name1}</h6>
@@ -29,6 +30,8 @@ async function App() {
         console.log(error);
       });
   });
+  }
+  post()
 
   return (
     <>

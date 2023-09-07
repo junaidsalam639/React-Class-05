@@ -86,6 +86,11 @@ form a{
 }
 .post_add img{
   padding: 5px;
+  border-radius: 10%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  object-position: center;
 }
 .post_add p{
   padding-top: 15px;
@@ -93,6 +98,7 @@ form a{
 .post_add :first-child{
   margin-top: 4%;
 }
+
 .post_add button{
  margin-top: 10px;
  margin-bottom: 10px;
