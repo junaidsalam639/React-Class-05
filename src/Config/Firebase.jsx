@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth , createUserWithEmailAndPassword , signInWithEmailAndPassword , onAuthStateChanged , signOut } from "firebase/auth";
 import { getFirestore , addDoc , collection , query, where, getDocs  } from "firebase/firestore";
+import { getStorage , ref , uploadBytes , getDownloadURL} from "firebase/storage";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDVsv1MYLThEimC-6EXd4oY7N-960GP-Bw",
@@ -17,6 +18,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
-
-export {app , auth , createUserWithEmailAndPassword , signInWithEmailAndPassword , onAuthStateChanged , signOut , db , addDoc , collection , query, where, getDocs  }
+const storage = getStorage(app)
+export {app , auth , createUserWithEmailAndPassword , signInWithEmailAndPassword , onAuthStateChanged , signOut , db , addDoc , collection , query, where, getDocs , ref , uploadBytes , getDownloadURL , storage }
 

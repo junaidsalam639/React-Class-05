@@ -62,6 +62,37 @@ form a{
 .login-singup-user .input-group .form-control:focus{
   box-shadow: none;
 }
+.row .input-group .form-control:focus{
+  box-shadow: none;
+}
 
 
 /* login-singup-user end */
+
+
+
+
+/* <!-- public post start --> */
+
+.input-group .form-control:focus{
+  box-shadow: none;
+}
+
+/* <!-- public post end --> */
+
+
+button:focus{
+  border: 0;
+  outline: 0;
+}
+.btn:focus{
+  border: 0;
+  outline: 0;
+}
+h5{
+  text-transform: capitalize;
+}
+
+#root1 img{
+  width: 100;
+}

@@ -22,6 +22,7 @@ const Navbar = () => {
                 console.log(doc.id, " => ", doc.data());
                 document.getElementById('inner').innerHTML =
                     `<a href="">${doc.data().username}</a>
+                    <a href="" id='dash'>Dashboard</a>
                     <a href="" id='logout'>Logout</a>
                     `
             });
@@ -29,6 +30,14 @@ const Navbar = () => {
         } else {
             navigate('/')
         }
+
+        const dash = document.getElementById('dash');
+        if(dash) {
+            dash.addEventListener('click' , (e) => {
+                navigate('/dashboard')
+            })
+        }
+        
         const logout = document.getElementById('logout');
         if (logout) {
             logout.addEventListener('click', (e) => {
