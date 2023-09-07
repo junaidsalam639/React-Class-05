@@ -66,10 +66,10 @@ const Dashboard = () => {
         <img src="${url}" alt="" width=${120} style=${{borderRadius : '15px'}}  className='p-3'/>
         <div className="para">
         <h4 className='fw-bold' id='title1'>${doc.data().title}</h4>
-        <p className='text-center' style=${{letterSpacing: '5px'}}>${doc.data().name1}</p>
+        <h6 className='text-center' style=${{letterSpacing: '5px'}}>${doc.data().name1}</h6>
         </section>
         </div>
-        <p className='p-3' style=${{letterSpacing: '1px'}}>${doc.data().description}!</p>
+        <p className='mt-4' style=${{letterSpacing: '1px'}}>${doc.data().description}!</p>
     </div>`
   })
   .catch((error) => {
