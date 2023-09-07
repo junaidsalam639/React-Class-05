@@ -40,7 +40,7 @@ const Login = () => {
                     <input type="email" className="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1" id='email' />
                 </div>
                 <div className="input-group mb-3">
-                    <input type="password" className="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1" id='password' />
+                    <input type="password" className="form-control" placeholder="Password at least 8 character" aria-label="Username" aria-describedby="basic-addon1" id='password' />
                 </div>
                 <button type="button" onClick={login_user} className="btn btn-outline-info w-100">Login</button>
                 <a href="" className='my-3' onClick={singup}>singup?</a>

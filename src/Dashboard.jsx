@@ -131,7 +131,7 @@ const Dashboard = () => {
           <div className="row" id='post_add'>
           <div className="col-lg-8">
     <div className="image d-flex justify-content-start align-items-center">
-     <img src="https://firebasestorage.googleapis.com/v0/b/react-85e4f.appspot.com/o/ANOsBUZhU5roPFiPqy4l?alt=media&token=5d9e8322-7673-4031-b52f-e67ce40a1fc2" alt="" width={160} style={{borderRadius : '15px'}}  className='p-3'/>
+     <img src="https://media.istockphoto.com/id/1322277517/photo/wild-grass-in-the-mountains-at-sunset.jpg?s=612x612&w=0&k=20&c=6mItwwFFGqKNKEAzv0mv6TaxhLN3zSE43bWmFN--J5w=" alt="" width={160} style={{borderRadius : '15px'}}  className='p-3'/>
      <div className="para">
      <h4 className='fw-bold' id='title1'>Title</h4>
      <p className='' style={{letterSpacing: '5px'}}>Name</p>
