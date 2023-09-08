@@ -15,7 +15,7 @@ import Login from './Singup-Login/Login'
 import Singup from './Singup-Login/Singup';
 import Dashboard from './Dashboard';
 import UserData from './Component/UserData';
-
+import AntDesing from './Component/AntDesing';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -36,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: "/userdata",
     element: <UserData />,
+  },
+  {
+    path: "/antdesing",
+    element: <AntDesing />,
   },
 ]);
 
