@@ -3,6 +3,7 @@ import { SearchOutlined  } from '@ant-design/icons';
 import { Button, Tooltip, Space, Col, Divider, Row, Card } from 'antd';
 import CardComp from './CardComp';
 import CarouselComp from './CarouselComp';
+import FormComp from './FormComp';
 
 const style = {
     background: '#0092ff',
@@ -16,6 +17,7 @@ const style = {
 const AntDesing = () => {
     return (
         <div>
+            <FormComp/>
             <Tooltip title="search">
                 <Button type="primary" shape="circle" icon={<SearchOutlined />} search />
             </Tooltip>
