@@ -40,9 +40,7 @@ const FormComp = () => {
       <Input />
     </Form.Item>
 
-    <Form.Item
-      label="Password"
-      name="password"
+    <Form.Item label="Password" name="password"
       rules={[
         {
           required: true,
