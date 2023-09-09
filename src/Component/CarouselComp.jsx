@@ -2,7 +2,7 @@ import React from 'react'
 import {  Carousel} from 'antd';
 
 const contentStyle = {
-    height: '60vh',
+    height: '80vh',
     color: '#fff',
     lineHeight: '160px',
     textAlign: 'center',
@@ -10,7 +10,7 @@ const contentStyle = {
   };
 
   const carouselImage =  {
-    height : '60vh',
+    height : '80vh',
     width : '100%',
     objectFit : 'cover',
     objectPosition : 'center',

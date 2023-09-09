@@ -28,4 +28,16 @@
 }
 /* input style end */
 
-
+.card-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; 
+    width: 100%;
+}
+.card{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}

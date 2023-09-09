@@ -1,28 +1,30 @@
 import React from 'react'
+import './component.css'
 import { SearchOutlined , EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
-import { Button, Tooltip, Space, Col, Divider, Row  , Avatar, Card , Carousel} from 'antd';
+import { Button, Tooltip, Space, Col, Divider, Row  , Avatar, Card , Carousel, Menu} from 'antd';
+import MenuAPi from './MenuApi';
 const { Meta } = Card;
 
-
-const CardComp = () => {
-  const edit = () => {
-     alert('Hello')
-  }
-  const dele = () => {
-    alert('Hello')
-  }
+const CardComp = (props) => {
+    console.log(props.Menu);
   return (
     <div>
-           <Card style={{width: 260, marginTop : '8%', marginBottom : '8%' }}
-        cover={ <img alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" />}
+      {
+        props.Menu.map((e) => {
+          return <div key={e.id} className='card mt-4 mb-4'>
+           <Card style={{width: 300, height : "450px"  }}
+        cover={ <img alt="example" src={e.image} width={300} height={200} />}
          actions={[
-           <Button onClick={edit}>Edit</Button>,
-             <Button onClick={dele}>Delete</Button>,
+           <Button>Edit</Button>,
+             <Button>Delete</Button>,
          ]}>
-         <Meta avatar={<Avatar src="https://xsgames.co/randomusers/avatar.php?g=pixel" />}
-           title="Card title"
-           description="This is the description"/>
+         <Meta avatar={''}
+           title={e.name}
+           description={e.description}/>
        </Card>
+           </div>
+        })
+      }
       
     </div>
   )
